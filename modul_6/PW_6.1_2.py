@@ -1,17 +1,11 @@
-info_lst = input(
-    'Введите информацию о студенте через пробел (имя, фамилия, город, место учёбы, оценки): '
-).split()
-info_dict = dict()
+stud_info = input('Введите информацию о студенте через пробел (имя, фамилия, город, место учёбы, оценки): ').split()
+stud_dict = dict()
 
-info_dict['Имя'] = info_lst[0]
-info_dict['фамилия'] = info_lst[1]
-info_dict['город'] = info_lst[2]
-info_dict['место учёбы'] = info_lst[3]
-info_dict['Оценки'] = []
-for i_makr in info_lst[4:]:
-    info_dict['Оценки'].append(int(i_makr))
+stud_dict['Имя'] = stud_info[0]
+stud_dict['Фамилия'] = stud_info[1]
+stud_dict['Город'] = stud_info[2]
+stud_dict['Место учёбы'] = stud_info[3]
+stud_dict['Оценки'] = ', '.join(stud_info[4:])
 
-print(info_dict)
-
-for i in info_dict:
-    print(f'{i} - {info_dict[i]}')
+for i_info in stud_dict:
+    print(f'{i_info} - {stud_dict[i_info]}')

@@ -1,17 +1,4 @@
 text = set(input('Введите строку: '))
-text_set = set(text)
+result = text.intersection(set('0123456789'))
 
-digit_lst = ''
-
-for i_set in text_set:
-    if '0 '< i_set < '9':
-        digit_lst += i_set
-
-print(digit_lst)
-
-# digit_lst = []
-# for i_set in text:
-#     if '0 '< i_set < '9':
-#         digit_lst.append(i_set)
-#
-# print(''.join(digit_lst))
+print(f'Различные цифры строки: {''.join(sorted(result))}')

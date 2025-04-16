@@ -1,22 +1,17 @@
-phone_book_dict = dict()
-
+contact_dict = dict()
 while True:
-    print(f'Текущий контакт на телефоне:')
-
-    if phone_book_dict:
-        for i_cont in phone_book_dict:
-            print(f'{i_cont} {phone_book_dict[i_cont]}')
+    print('Текущие контакты на телефоне:')
+    if contact_dict:
+        for i_cont in contact_dict:
+            print(i_cont, contact_dict[i_cont])
     else:
         print('<Пусто>')
 
-    add_name = input('\nВведите имя: ')
-
-    if add_name == '':
+    name = input('\nВведите имя: ')
+    if name == '':
         break
-    elif add_name not in phone_book_dict:
-        add_num = int(input('Введите номер телефона: '))
-        phone_book_dict[add_name] = add_num
-        print()
+    elif name in contact_dict:
+        print(f'Внимание! имя {name} уже есть в списке\n')
     else:
-        print(f'Ошибка. Пользователь с именем {add_name} уже есть в списке\n')
-
+        number = int(input('Введите номер телефона: '))
+        contact_dict[name] = number

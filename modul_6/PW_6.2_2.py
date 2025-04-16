@@ -10,10 +10,10 @@ incomes = {
     'persimmon': 310.00,
 }
 tot_income = sum(incomes.values())
+min_incom = min(incomes.keys(), key = incomes.get)
+
 print(f'Общий доход за год составил {tot_income} рублей')
+print(f'Самый маленький доход у {min_incom}. Он составляет {incomes[min_incom]} рублей')
 
-min_income = min(incomes, key = incomes.get)
-print(f'Самый маленький доход у {min_income}. Он составляет {incomes[min_income]} рублей')
-
-incomes.pop(min_income)
-print(f'Итоговый словарь: {incomes}\n')
+incomes.pop(min_incom)
+print(f'Итоговый словарь: {incomes}')

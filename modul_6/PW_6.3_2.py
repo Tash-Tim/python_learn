@@ -1,5 +1,3 @@
-from tkinter.font import names
-
 players_dict = {
     1: {'name': 'Vanya', 'team': 'A', 'status': 'Rest'},
     2: {'name': 'Lena', 'team': 'B', 'status': 'Training'},
@@ -11,18 +9,17 @@ players_dict = {
     8: {'name': 'Masha', 'team': 'C', 'status': 'Travel'}
 }
 
-a_team = [i_ateam['name']
-    for i_ateam in players_dict.values()
-          if i_ateam['status'] == 'Rest']
+a_team = [i_team['name']
+          for i_team in players_dict.values()
+          if i_team['team'] == 'A' and i_team['status'] == 'Rest']
+print(f'Все члены команды А, которые отдыхают: {','.join(a_team)}')
 
-b_team = [i_bteam['name']
-    for i_bteam in players_dict.values()
-          if i_bteam['status'] == 'Training']
+b_team = [i_team['name']
+          for i_team in players_dict.values()
+          if i_team['team'] == 'B' and i_team['status'] == 'Training']
+print(f'Все члены команды B, которые тренируются: {','.join(b_team)}')
 
-c_team = [i_cteam['name']
-    for i_cteam in players_dict.values()
-          if i_cteam['status'] == 'Travel']
-
-print('Члены команды А, которые отдыхают: {}'.format(a_team))
-print('Члены команды В, которые тренируются: {}'.format(b_team))
-print('Члены команды C, которые путешествуют: {}'.format(c_team))
+c_team = [i_team['name']
+          for i_team in players_dict.values()
+          if i_team['team'] == 'C' and i_team['status'] == 'Travel']
+print(f'Все члены команды C, которые путешествуют: {','.join(c_team)}')

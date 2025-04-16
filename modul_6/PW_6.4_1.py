@@ -1,5 +1,5 @@
-punk_sym = {'.', ',', ';', ':', '!', '?'}
+sym_set = set(".,;:!?")
 text = set(input('Введите строку: '))
-punk_sym_text = text & punk_sym
-print(f'Знаков пунктуации в строке: {punk_sym_text}')
-print(f'Количество знаков пунктуации: {len(punk_sym_text)}')
+sym_sum = text.intersection(sym_set)
+
+print(f'Количество знаков пунктуации: {len(sym_sum)}')
