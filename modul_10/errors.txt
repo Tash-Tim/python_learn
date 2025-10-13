@@ -1,0 +1,45 @@
+Wors N4 contains digit
+Wors N6 contains digit
+Wors N4 contains digit
+Wors N6 contains digit
+Wors N4 contains digit
+Wors N6 contains digit
+Wors N9 contains digit
+Wors N10 contains digit
+Wors N11 contains digit
+Wors N12 contains digit
+Wors N16 contains digit
+Wors N18 contains digit
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+Wors N4 contains digit
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+Wors N6 contains digit
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+Wors N9 contains digit
+Wors N10 contains digit
+Wors N11 contains digit
+Wors N12 contains digit
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+Wors N16 contains digit
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+Wors N18 contains digit
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+unsupported operand type(s) for +=: 'int' and 'NoneType'
+Wors N4 contains digit
+Wors N6 contains digit
+Wors N9 contains digit
+Wors N10 contains digit
+Wors N11 contains digit
+Wors N12 contains digit
+Wors N16 contains digit
+Wors N18 contains digit
+Wors N4 contains digit
+Wors N4 contains digit

@@ -1,0 +1,119 @@
+import os
+
+file_name = 'Admin.bat'
+dir_name = 'access'
+rel_path = os.path.join(dir_name, file_name)
+abs_path = os.path.abspath(rel_path)
+print('Абсолютный путь до файла: {}'.format(abs_path))
+print('Относительный путь до файла: {}'.format(rel_path))
+
+
+****************************************
+import os
+def dirs_files(project):
+    print('\nСодержимое директории: {}'.format(project))
+    for i_dir in os.listdir(project):
+        dirs_path = os.path.join(project, i_dir)
+        print('   ', dirs_path)
+
+
+proj_dir_name = ['Skillbox_basic_2', 'Python_Basic']
+for i_proj in proj_dir_name:
+    path_to_proj = os.path.abspath(os.path.join('..', '..', i_proj))
+    dirs_files(path_to_proj)
+****************************************
+import os
+
+root_disk = os.path.abspath(os.path.sep)
+print(root_disk)
+****************************************
+import os
+
+obj_path = input('Путь: ')
+
+if os.path.isdir(obj_path):
+    print('Это директория (папка)')
+elif os.path.isfile(obj_path):
+    print('Это файл')
+    print('Размер файла:', os.path.getsize(obj_path), 'байт')
+elif os.path.islink(obj_path):
+    print('Это ссылка')
+else:
+    print('Указанного пути не существует')
+****************************************
+import os
+
+def find_dir(project, find):
+    print('Ищу в:', os.path.join(project))
+    for i_dir in os.listdir(project):
+        path = os.path.join(project, i_dir)
+        if i_dir == find:
+            print('Путь найден', path)
+        elif os.path.isdir(path):
+            result = find_dir(path, find)
+            if result:
+                break
+    else:
+        result = None
+    return result
+
+user_dir = os.path.abspath(os.path.join('..', '..', 'Test_dir'))
+need_file = 'Test_file_.txt'
+
+
+print(find_dir(user_dir, need_file))
+****************************************
+file = open('D:/03_ Py_Project/task/group_1.txt', 'r', encoding='utf-8')
+summa = 0
+for i_line in file:
+    info = i_line.split()
+    summa += int(info[2])
+file.close()
+file = open('D:/03_ Py_Project/task/group_1.txt', 'r', encoding='utf-8')
+diff = 0
+for i_line in file:
+    info = i_line.split()
+    diff -= int(info[2])
+file.close()
+file = open('D:/03_ Py_Project/task/Additional_info/group_2.txt', 'r', encoding='utf-8')
+compose = 1
+for i_line in file:
+    info = i_line.split()
+    compose *= int(info[2])
+print(summa)
+print(diff)
+print(compose)
+****************************************
+import os
+import random
+
+def find_dir(direct, target):
+    dir_list = []
+    print('\nИщу в директории:', direct)
+    for i_elem in os.listdir(direct):
+        path = os.path.join(direct, i_elem)
+        if i_elem in target:
+            print(f'   Файл {i_elem} найдет. Путь: {path}')
+            dir_list.append(path)
+        elif os.path.isdir(path):
+            result = (find_dir(path, target))
+            if result:
+                dir_list.extend(result)
+    return dir_list
+
+
+def open_file(get_path):
+    print(f'\nОткрыть файл {get_path}')
+    file = open(get_path, 'r', encoding='utf-8')
+    for line in file:
+        print('   ',line, end='')
+    file.close()
+
+
+loc_dir = os.path.abspath(os.path.join('..', '..', 'Test_dir'))
+find_file = ('Data_932.txt', 'Data_932_dbl.txt')
+path_list = find_dir(loc_dir, find_file)
+open_file(random.choice(path_list))
+
+
+****************************************
